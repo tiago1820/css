@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+
+}
+
+.trapezoid {
+    background-color: purple;
+    width: 200px;
+    height: 150px;
+    margin: 80px;
+    --s: 50px;
+    clip-path: polygon(
+            /* x             y */
+            var(--s) 0,
+            calc(100% - var(--s)) 0,
+            100% 100%,
+            0 100%);
+}
+
+.box {
+    background-color: #64908A;
+    width: 300px;
+    height: 150px;
+    margin: 80px;
+    clip-path: polygon(0 0,
+            /* top-left */
+            82% 0,
+            /* top-right */
+            99% 50%,
+            82% 100%,
+            /* bottom-right */
+            0 100%,
+            /* bottom-left */
+            15% 50%);
+}
+
+.box2 {
+    background-color: purple;
+    width: 200px;
+    height: 150px;
+    margin: 80px;
+    --s: 25px;
+    clip-path: polygon(
+            /* x       y */
+            var(--s) 0,
+            calc(100% - var(--s)) 0,
+            100% 100%,
+            0 100%
+    );
+}
